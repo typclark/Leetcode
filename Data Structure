@@ -1,0 +1,54 @@
+Stack: 3 problems
+1. min stack
+two stacks
+2. implement queue by stacks
+use two stacks,
+when offer(), use push.
+when poll(), reverse the stack(means pop to another stack) and pop out.
+O(N) in data structrue means average time for each operations. all times for n operations / n operations.
+for each element, 2 pushs, 2 pops. 1 push stack1, 1 pop stack1, 1 push stack2, 1pop stack2. so offer and poll O(1);
+
+3.largest histogram
+O(n2) brute force. needs better
+O(nlogn) // sort, n*logn data structure(heap);
+O(n)  //
+O(1) //usual math
+
+2,1 start from 1 is meaningless, 
+not for(start to end)
+for(min height in a specific area)
+find left boundary, and right boundary, calculate. else skip
+
+if increase, skip calculation. 
+if decrease, find boudnary and calculate.
+
+4.maxtree
+
+
+Hash table
+public int hashfuncton(String key) {
+  int sum = 0;
+  for(int i = 0; i < key.length; i++) {
+    sum += sum*33 + key.charAt(i);
+    sum = sum%HASH_TABLE_SIZE;
+  }
+  return sum;
+}
+
+close hashing: cannot remove, find neighbors spaces.
+open hasing: linked list,
+
+rehashing: O(n). 
+lock hashtable, consume time.
+
+hashtable thread safe: slow, need lock and unlock
+hashmap not thread safe: faster than hashtable.
+
+Heap:
+max/min O(1);
+add O(logN);
+remove(logN);
+
+review: 
+sift up/down,
+maxtree.
